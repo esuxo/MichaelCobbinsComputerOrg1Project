@@ -21,3 +21,7 @@ invalid:
     la $a0, error
     syscall
     j main                  # Restart input prompt
+step2:
+    li $t1, 0               # First Fibonacci number
+    li $t2, 1               # Second Fibonacci number
+    li $t3, 0               # Counter for Fibonacci numbers
