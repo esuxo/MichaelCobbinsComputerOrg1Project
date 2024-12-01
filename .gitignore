@@ -1,0 +1,10 @@
+# Ignore SPIM log files
+*.log
+
+# Ignore temporary files
+*.tmp
+
+# Ignore other unwanted files
+*.swp
+.DS_Store
+Thumbs.db
