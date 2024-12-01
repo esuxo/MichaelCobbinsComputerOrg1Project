@@ -44,3 +44,7 @@ fibonacci_loop:
     add $t4, $t1, $t2       # t4 = t1 + t2
     move $t1, $t2           # Shift t2 to t1
     move $t2, $t4           # Shift t4 to t2	
+    
+    addi $t3, $t3, 1        # Increment counter
+    j fibonacci_loop        # Repeat loop
+
