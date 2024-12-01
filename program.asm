@@ -16,12 +16,22 @@ main:
 check_input:
     blt $t0, 25, invalid    # If N < 25, jump to invalid
     j step2                 # If valid, go to Fibonacci logic
+
 invalid:
     li $v0, 4               # Print error message
     la $a0, error
     syscall
     j main                  # Restart input prompt
+
 step2:
     li $t1, 0               # First Fibonacci number
     li $t2, 1               # Second Fibonacci number
     li $t3, 0               # Counter for Fibonacci numbers
+
+fibonacci_loop:
+    beq $t3, $t0, exit      # If counter equals N, exit loop
+
+    # Print current Fibonacci number
+    move $a0, $t1
+    li $v0, 1               # Print integer
+    syscall
