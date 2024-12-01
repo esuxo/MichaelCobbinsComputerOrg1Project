@@ -16,3 +16,8 @@ main:
 check_input:
     blt $t0, 25, invalid    # If N < 25, jump to invalid
     j step2                 # If valid, go to Fibonacci logic
+invalid:
+    li $v0, 4               # Print error message
+    la $a0, error
+    syscall
+    j main                  # Restart input prompt
