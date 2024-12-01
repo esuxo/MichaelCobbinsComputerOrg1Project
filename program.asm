@@ -48,3 +48,6 @@ fibonacci_loop:
     addi $t3, $t3, 1        # Increment counter
     j fibonacci_loop        # Repeat loop
 
+exit:
+    li $v0, 10              # Exit program
+    syscall
