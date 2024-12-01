@@ -13,3 +13,6 @@ main:
     syscall
     move $t0, $v0           #store input in $t0
  
+check_input:
+    blt $t0, 25, invalid    # If N < 25, jump to invalid
+    j step2                 # If valid, go to Fibonacci logic
