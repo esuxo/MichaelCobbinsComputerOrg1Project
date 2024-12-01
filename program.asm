@@ -35,3 +35,12 @@ fibonacci_loop:
     move $a0, $t1
     li $v0, 1               # Print integer
     syscall
+    
+    li $v0, 4               # Print newline
+    la $a0, newline
+    syscall
+
+    # Calculate next Fibonacci number
+    add $t4, $t1, $t2       # t4 = t1 + t2
+    move $t1, $t2           # Shift t2 to t1
+    move $t2, $t4           # Shift t4 to t2	
